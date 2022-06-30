@@ -14,19 +14,19 @@ function RecipeCreate( {handleCreate, handleFormChange, form} ) {
         <tbody>
           <tr className='inputboxes'>
             <td className='small' >
-              <input type='text' name='name' placeholder='Name' value={form.name} onChange={handleFormChange} />
+              <input type='text' name='name' required placeholder='Name' value={form.name} onChange={handleFormChange} />
             </td>
             <td className='small' >
-              <input type='text' name='cuisine' placeholder='Cuisine' value={form.cuisine} onChange={handleFormChange} />
+              <input type='text' name='cuisine' required placeholder='Cuisine' value={form.cuisine} onChange={handleFormChange} />
             </td>
             <td className='small' >
-              <input type='url' name='photo' placeholder='URL' value={form.photo} onChange={handleFormChange} />
+              <input type='url' name='photo' required placeholder='URL' value={form.photo} onChange={handleFormChange} />
             </td>
             <td className='big' >
-              <textarea name='ingredients' placeholder='Ingredients' value={form.ingredients} onChange={handleFormChange} />
+              <textarea name='ingredients' required placeholder='Ingredients' value={form.ingredients} onChange={handleFormChange} />
             </td>
             <td className='big' >
-              <textarea name='preparation' placeholder='Preparation' value={form.preparation} onChange={handleFormChange} />
+              <textarea name='preparation' required placeholder='Preparation' value={form.preparation} onChange={handleFormChange} />
             </td>
             <td className='small' >
               <button type='submit'>Create</button>
