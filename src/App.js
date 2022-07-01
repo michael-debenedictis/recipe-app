@@ -15,25 +15,20 @@ function App() {
   };
   const [form, setForm] = useState(initialFormState);
   const handleFormChange = ( {target} ) => {
+    console.log(target.name, 'hi')
     const nameTarget = target.name;
     setForm((cur) => {
       const formUpdated = {...cur}
       formUpdated[nameTarget] = target.value;
       return formUpdated
     })
-    console.log(form)
   }
   const [recipes, setRecipes] = useState(RecipeData);
   // TODO: Add the ability for the <RecipeList /> component to list and delete an existing recipe.
   // TODO: Add the ability for the <RecipeCreate /> component to create new recipes.
   const handleCreate = (event) => {
-    console.log(event)
     event.persist();
     event.preventDefault();
-    //////////////////////////////////
-    
-    console.log(event.target.name.value)
-    console.log(event.target[2])
     let newObject = {
       name: form.name,
       cuisine: form.cuisine,
@@ -44,6 +39,16 @@ function App() {
     setRecipes(cur => {
       return [...cur, newObject]
     })
+    const nameField = document.querySelector('#namefield');
+    const cuisineField = document.querySelector('#cuisinefield');
+    const photoField = document.querySelector('#photofield');
+    const ingredientsField = document.querySelector('#ingredientsfield');
+    const preparationField = document.querySelector('#preparationfield');
+    nameField.value = '';
+    cuisineField.value = '';
+    photoField.value = '';
+    ingredientsField.value = '';
+    preparationField.value = '';
     setForm(initialFormState)
   }
   return (
