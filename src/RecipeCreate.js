@@ -1,13 +1,10 @@
-import React, { useState } from "react";
+import React from 'react';
 
 function RecipeCreate( {handleCreate, handleFormChange, form} ) {
 
   // TODO: When the form is submitted, a new recipe should be created, and the form contents cleared.
   // TODO: Add the required input and textarea form elements.
   // TODO: Add the required submit and change handlers
-  const clearInput = (event) => {
-    
-  }
   return (
     <form id='formcreate' name='create' onSubmit={handleCreate}>
       <table>

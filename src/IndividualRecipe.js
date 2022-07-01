@@ -1,5 +1,4 @@
 import React from "react";
-import {handleDelete} from './App.js'
 
 function IndividualRecipe( {item, index, recipes, setRecipes} ) {
   let backgroundColor
@@ -24,7 +23,7 @@ function IndividualRecipe( {item, index, recipes, setRecipes} ) {
         <p name='cuisine' value='cuisine'>{item.cuisine}</p>
       </td>
       <td className='small' value='photo' name='photo' >
-        <img name='photo' value='photo' style={{width: '100%', height: '100%', objectFit: 'contain'}} src={item.photo}/>
+        <img name='photo' value='photo' style={{width: '100%', height: '100%', objectFit: 'contain'}} alt='the recipe' src={item.photo}/>
       </td>
       <td className='big content_td' value='ingredients' name='ingredients' >
         <p name='ingredients' value='ingredients'>{item.ingredients}</p>
