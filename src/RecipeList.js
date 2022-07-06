@@ -20,7 +20,7 @@ function RecipeList( {recipes, setRecipes} ) {
           </tr>
         </thead>
         <tbody>
-          {recipes.map((item, index) => <IndividualRecipe item={item} index={index} recipes={recipes} setRecipes={setRecipes} />)}
+          {recipes.map((item, index) => <IndividualRecipe key={item.name.replaceAll(' ', '-')} item={item} index={index} recipes={recipes} setRecipes={setRecipes} />)}
         </tbody>
       </table>
     </div>

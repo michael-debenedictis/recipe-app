@@ -5,12 +5,12 @@ function IndividualRecipe( {item, index, recipes, setRecipes} ) {
   if (index % 2 === 0) {
     backgroundColor = '#fce5cd';
   } else {
-    backgroundColor = '#fffff'
+    backgroundColor = '#fffff';
   }
   const handleDelete = ( {target} ) => {
     setRecipes(cur => {
       const theRecipes = [...cur];
-      const theRecipesFiltered = theRecipes.filter(recipe => recipe.name !== item.name)
+      const theRecipesFiltered = theRecipes.filter(recipe => recipe.name !== item.name);
       return theRecipesFiltered
     })
   }
